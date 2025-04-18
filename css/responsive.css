@@ -1,0 +1,163 @@
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .search-box {
+        width: 40%;
+    }
+}
+
+@media (max-width: 992px) {
+    .product-details-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .auth-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .auth-image {
+        display: none;
+    }
+    
+    .checkout-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .order-summary {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+    }
+    
+    .logo {
+        order: 1;
+    }
+    
+    .mobile-menu-btn {
+        order: 2;
+        display: block;
+    }
+    
+    .search-box {
+        order: 3;
+        width: 100%;
+        margin: 15px 0;
+    }
+    
+    nav {
+        order: 4;
+        display: none;
+    }
+    
+    nav.active {
+        display: block;
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero {
+        height: 300px;
+    }
+    
+    .slide h1 {
+        font-size: 28px;
+    }
+    
+    .slide p {
+        font-size: 16px;
+    }
+    
+    .cart-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .cart-item {
+        grid-template-columns: 80px 1fr;
+    }
+    
+    .cart-item-total {
+        grid-column: 1 / -1;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 95%;
+    }
+    
+    .hero {
+        height: 250px;
+    }
+    
+    .slide .container {
+        padding: 20px;
+    }
+    
+    .slide h1 {
+        font-size: 24px;
+    }
+    
+    .category-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .product-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-actions .btn {
+        width: 100%;
+    }
+    
+    .tabs-header {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        flex: 1;
+        min-width: 120px;
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .checkout-progress {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .checkout-progress::before {
+        display: none;
+    }
+    
+    .progress-step {
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    .progress-step p {
+        margin-bottom: 0;
+    }
+    
+    .coupon-input {
+        flex-direction: column;
+    }
+    
+    .apply-btn {
+        width: 100%;
+    }
+}

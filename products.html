@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - ZenjiKart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="ZenjiKart Logo"></a>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search for products, brands and more">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+                    <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+                    <li><a href="products.html"><i class="fas fa-store"></i> Shop</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="products.html"><i class="fas fa-store"></i> Shop</a></li>
+            <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+            <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+            <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+        </ul>
+    </div>
+
+    <!-- Products Section -->
+    <section class="products-page">
+        <div class="container">
+            <div class="products-header">
+                <h1>All Products</h1>
+                <div class="sort-options">
+                    <select id="sort-by">
+                        <option value="default">Sort By</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="popularity">Popularity</option>
+                        <option value="newest">Newest First</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="products-filter">
+                <div class="filter-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#" data-category="all">All Categories</a></li>
+                        <li><a href="#" data-category="electronics">Electronics</a></li>
+                        <li><a href="#" data-category="fashion">Fashion</a></li>
+                        <li><a href="#" data-category="home">Home & Kitchen</a></li>
+                        <li><a href="#" data-category="beauty">Beauty</a></li>
+                        <li><a href="#" data-category="grocery">Grocery</a></li>
+                    </ul>
+                </div>
+                <div class="filter-section">
+                    <h3>Price Range</h3>
+                    <div class="price-range">
+                        <input type="range" min="0" max="1000000" value="1000000" id="price-slider">
+                        <div class="price-values">
+                            <span>TZS 0</span>
+                            <span>TZS <span id="max-price">1,000,000</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <h3>Brands</h3>
+                    <ul>
+                        <li><a href="#" data-brand="all">All Brands</a></li>
+                        <li><a href="#" data-brand="samsung">Samsung</a></li>
+                        <li><a href="#" data-brand="apple">Apple</a></li>
+                        <li><a href="#" data-brand="nike">Nike</a></li>
+                        <li><a href="#" data-brand="adidas">Adidas</a></li>
+                        <li><a href="#" data-brand="lg">LG</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="products-grid" id="all-products">
+                <!-- Products will be loaded via JavaScript -->
+            </div>
+            
+            <div class="pagination">
+                <button class="prev-page" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+                <div class="page-numbers">
+                    <span class="active">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                </div>
+                <button class="next-page">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>About ZenjiKart</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">Payments</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Cancellation & Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Policy</h3>
+                    <ul>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Dar es Salaam, Tanzania</li>
+                        <li><i class="fas fa-phone"></i> +255 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> support@zenjikart.co.tz</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ZenjiKart. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - ZenjiKart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="ZenjiKart Logo"></a>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search for products, brands and more">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+                    <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+                    <li><a href="products.html"><i class="fas fa-store"></i> Shop</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="products.html"><i class="fas fa-store"></i> Shop</a></li>
+            <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+            <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+            <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+        </ul>
+    </div>
+
+    <!-- Checkout Section -->
+    <section class="checkout">
+        <div class="container">
+            <div class="checkout-progress">
+                <div class="progress-step active">
+                    <span>1</span>
+                    <p>Delivery</p>
+                </div>
+                <div class="progress-step">
+                    <span>2</span>
+                    <p>Payment</p>
+                </div>
+                <div class="progress-step">
+                    <span>3</span>
+                    <p>Confirmation</p>
+                </div>
+            </div>
+            
+            <div class="checkout-container">
+                <div class="checkout-form">
+                    <h2>Delivery Information</h2>
+                    <form id="delivery-form">
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="region">Region</label>
+                            <select id="region" required>
+                                <option value="">Select Region</option>
+                                <option value="dar">Dar es Salaam</option>
+                                <option value="arusha">Arusha</option>
+                                <option value="mwanza">Mwanza</option>
+                                <option value="dodoma">Dodoma</option>
+                                <option value="mbeya">Mbeya</option>
+                                <option value="morogoro">Morogoro</option>
+                                <option value="tanga">Tanga</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="district">District</label>
+                            <input type="text" id="district" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Street Address</label>
+                            <textarea id="address" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="delivery-notes">Delivery Notes (Optional)</label>
+                            <textarea id="delivery-notes" rows="2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Delivery Method</label>
+                            <div class="delivery-methods">
+                                <label class="delivery-option">
+                                    <input type="radio" name="delivery-method" value="standard" checked>
+                                    <div class="option-content">
+                                        <strong>Standard Delivery</strong>
+                                        <p>3-5 business days</p>
+                                        <span>Free</span>
+                                    </div>
+                                </label>
+                                <label class="delivery-option">
+                                    <input type="radio" name="delivery-method" value="express">
+                                    <div class="option-content">
+                                        <strong>Express Delivery</strong>
+                                        <p>1-2 business days</p>
+                                        <span>TZS 10,000</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn continue-btn">CONTINUE TO PAYMENT</button>
+                    </form>
+                </div>
+                
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-items" id="checkout-items">
+                        <!-- Order items will be loaded via JavaScript -->
+                    </div>
+                    <div class="summary-totals">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="checkout-subtotal">TZS 0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Delivery</span>
+                            <span id="checkout-delivery">TZS 0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Discount</span>
+                            <span id="checkout-discount">-TZS 0</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="checkout-total">TZS 0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="coupon-code">
+                        <h3>Apply Coupon</h3>
+                        <div class="coupon-input">
+                            <input type="text" placeholder="Enter coupon code" id="coupon-code">
+                            <button class="btn apply-btn" id="apply-coupon">APPLY</button>
+                        </div>
+                        <div class="available-coupons">
+                            <p>Available Coupons:</p>
+                            <ul>
+                                <li data-code="WELCOME10">WELCOME10 - 10% off on first order</li>
+                                <li data-code="FREESHIP">FREESHIP - Free delivery</li>
+                                <li data-code="SAVE20">SAVE20 - 20% off on orders above TZS 100,000</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>About ZenjiKart</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">Payments</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Cancellation & Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Policy</h3>
+                    <ul>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Dar es Salaam, Tanzania</li>
+                        <li><i class="fas fa-phone"></i> +255 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> support@zenjikart.co.tz</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ZenjiKart. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>

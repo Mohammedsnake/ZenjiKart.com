@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - ZenjiKart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="ZenjiKart Logo"></a>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search for products, brands and more">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+                    <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+                    <li><a href="products.html"><i class="fas fa-store"></i> Shop</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="products.html"><i class="fas fa-store"></i> Shop</a></li>
+            <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+            <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+            <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+        </ul>
+    </div>
+
+    <!-- Product Details Section -->
+    <section class="product-details">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> &gt; 
+                <a href="products.html">Products</a> &gt; 
+                <span id="product-category-breadcrumb">Category</span> &gt; 
+                <span id="product-name-breadcrumb">Product Name</span>
+            </div>
+            
+            <div class="product-details-container">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="main-product-image" src="" alt="Product Image">
+                    </div>
+                    <div class="thumbnail-images" id="thumbnail-images">
+                        <!-- Thumbnails will be loaded via JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <h1 id="product-title">Product Title</h1>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-count">(124 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price" id="product-price">TZS 0</span>
+                        <span class="original-price" id="original-price">TZS 0</span>
+                        <span class="discount" id="discount-percent">0% off</span>
+                    </div>
+                    <div class="product-offers">
+                        <h3>Available offers</h3>
+                        <ul>
+                            <li><i class="fas fa-tag"></i> <strong>Bank Offer</strong> 5% Cashback on ABC Bank Cards</li>
+                            <li><i class="fas fa-tag"></i> <strong>Special Price</strong> Get extra 10% off (price inclusive of discount)</li>
+                            <li><i class="fas fa-tag"></i> <strong>Partner Offer</strong> Sign up for ZenjiPay and get TZS 100 off on first purchase</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="product-options">
+                        <div class="option">
+                            <h3>Color</h3>
+                            <div class="color-options" id="color-options">
+                                <!-- Color options will be loaded via JavaScript -->
+                            </div>
+                        </div>
+                        <div class="option">
+                            <h3>Size</h3>
+                            <div class="size-options" id="size-options">
+                                <!-- Size options will be loaded via JavaScript -->
+                            </div>
+                        </div>
+                        <div class="option">
+                            <h3>Quantity</h3>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                                <input type="number" value="1" min="1" id="product-quantity">
+                                <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn add-to-cart" id="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> ADD TO CART</button>
+                        <button class="btn buy-now" id="buy-now-btn">BUY NOW</button>
+                        <button class="wishlist-btn" id="wishlist-btn"><i class="far fa-heart"></i> WISHLIST</button>
+                    </div>
+                    
+                    <div class="delivery-info">
+                        <div class="delivery-option">
+                            <i class="fas fa-truck"></i>
+                            <div>
+                                <strong>Free Delivery</strong>
+                                <p>Delivery in 3-5 business days</p>
+                            </div>
+                        </div>
+                        <div class="delivery-option">
+                            <i class="fas fa-sync-alt"></i>
+                            <div>
+                                <strong>7 Days Replacement</strong>
+                                <p>Change of mind is not applicable</p>
+                            </div>
+                        </div>
+                        <div class="delivery-option">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <strong>1 Year Warranty</strong>
+                                <p>Manufacturer warranty</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="description">Description</button>
+                    <button class="tab-btn" data-tab="specifications">Specifications</button>
+                    <button class="tab-btn" data-tab="reviews">Reviews</button>
+                </div>
+                <div class="tabs-content">
+                    <div class="tab-pane active" id="description">
+                        <h3>Product Description</h3>
+                        <p id="product-description">Loading description...</p>
+                    </div>
+                    <div class="tab-pane" id="specifications">
+                        <h3>Product Specifications</h3>
+                        <table id="product-specifications">
+                            <!-- Specifications will be loaded via JavaScript -->
+                        </table>
+                    </div>
+                    <div class="tab-pane" id="reviews">
+                        <h3>Customer Reviews</h3>
+                        <div class="reviews-container" id="product-reviews">
+                            <!-- Reviews will be loaded via JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="related-products">
+                <h2>Similar Products</h2>
+                <div class="product-grid" id="related-products">
+                    <!-- Related products will be loaded via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>About ZenjiKart</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">Payments</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Cancellation & Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Policy</h3>
+                    <ul>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Dar es Salaam, Tanzania</li>
+                        <li><i class="fas fa-phone"></i> +255 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> support@zenjikart.co.tz</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ZenjiKart. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

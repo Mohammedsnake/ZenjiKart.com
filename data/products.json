@@ -1,0 +1,306 @@
+[
+    {
+        "id": 1,
+        "name": "Samsung Galaxy S23 Ultra",
+        "category": "electronics",
+        "brand": "samsung",
+        "price": 2500000,
+        "originalPrice": 2800000,
+        "discount": 11,
+        "images": [
+            "images/products/s23-ultra-1.jpg",
+            "images/products/s23-ultra-2.jpg",
+            "images/products/s23-ultra-3.jpg"
+        ],
+        "colors": ["Phantom Black", "Cream", "Green", "Lavender"],
+        "sizes": ["128GB", "256GB", "512GB"],
+        "description": "The Samsung Galaxy S23 Ultra is the ultimate smartphone with a 200MP camera, S Pen support, and the most powerful chipset in a Galaxy. Experience the pinnacle of smartphone innovation.",
+        "specifications": {
+            "Display": "6.8-inch Dynamic AMOLED 2X, 120Hz",
+            "Processor": "Snapdragon 8 Gen 2",
+            "RAM": "12GB",
+            "Storage": "256GB/512GB/1TB",
+            "Camera": "200MP wide + 12MP ultra-wide + 10MP telephoto x2",
+            "Battery": "5000mAh",
+            "OS": "Android 13 with One UI 5.1"
+        },
+        "rating": 4.8,
+        "reviews": [
+            {
+                "user": "John M.",
+                "rating": 5,
+                "title": "Best phone I've ever owned",
+                "comment": "The camera is incredible and battery life lasts all day."
+            },
+            {
+                "user": "Sarah K.",
+                "rating": 4,
+                "title": "Great but expensive",
+                "comment": "Love the phone but it's quite pricey."
+            }
+        ],
+        "stock": 15,
+        "isFeatured": true,
+        "isDeal": true
+    },
+    {
+        "id": 2,
+        "name": "Apple iPhone 14 Pro",
+        "category": "electronics",
+        "brand": "apple",
+        "price": 3200000,
+        "originalPrice": 3500000,
+        "discount": 9,
+        "images": [
+            "images/products/iphone14-pro-1.jpg",
+            "images/products/iphone14-pro-2.jpg"
+        ],
+        "colors": ["Space Black", "Silver", "Gold", "Deep Purple"],
+        "sizes": ["128GB", "256GB", "512GB", "1TB"],
+        "description": "The iPhone 14 Pro introduces the Dynamic Island, Always-On display, and our most advanced Pro camera system for breathtaking photos in any light.",
+        "specifications": {
+            "Display": "6.1-inch Super Retina XDR, 120Hz",
+            "Processor": "A16 Bionic",
+            "RAM": "6GB",
+            "Storage": "128GB/256GB/512GB/1TB",
+            "Camera": "48MP main + 12MP ultra-wide + 12MP telephoto",
+            "Battery": "3200mAh",
+            "OS": "iOS 16"
+        },
+        "rating": 4.9,
+        "reviews": [
+            {
+                "user": "David P.",
+                "rating": 5,
+                "title": "Worth every penny",
+                "comment": "The dynamic island is revolutionary and the camera is amazing."
+            }
+        ],
+        "stock": 8,
+        "isFeatured": true,
+        "isDeal": false
+    },
+    {
+        "id": 3,
+        "name": "Nike Air Max 270",
+        "category": "fashion",
+        "brand": "nike",
+        "price": 250000,
+        "originalPrice": 300000,
+        "discount": 17,
+        "images": [
+            "images/products/nike-airmax-1.jpg",
+            "images/products/nike-airmax-2.jpg"
+        ],
+        "colors": ["Black/White", "Blue", "Red", "White"],
+        "sizes": ["US 7", "US 8", "US 9", "US 10", "US 11", "US 12"],
+        "description": "The Nike Air Max 270 delivers comfortable, all-day wear with the tallest Air unit yet at the heel. The sleek design combines a lightweight upper with Max Air cushioning.",
+        "specifications": {
+            "Upper Material": "Mesh and synthetic",
+            "Sole Material": "Rubber",
+            "Closure": "Lace-up",
+            "Air Cushioning": "270-degree Max Air unit",
+            "Weight": "Approx. 320g"
+        },
+        "rating": 4.6,
+        "reviews": [
+            {
+                "user": "Michael T.",
+                "rating": 5,
+                "title": "Super comfortable",
+                "comment": "Wore these all day with no discomfort at all."
+            },
+            {
+                "user": "Lisa W.",
+                "rating": 4,
+                "title": "Great shoes",
+                "comment": "Love the look and feel, runs a bit small though."
+            }
+        ],
+        "stock": 22,
+        "isFeatured": false,
+        "isDeal": true
+    },
+    {
+        "id": 4,
+        "name": "Adidas Originals T-Shirt",
+        "category": "fashion",
+        "brand": "adidas",
+        "price": 45000,
+        "originalPrice": 60000,
+        "discount": 25,
+        "images": [
+            "images/products/adidas-tshirt-1.jpg",
+            "images/products/adidas-tshirt-2.jpg"
+        ],
+        "colors": ["Black", "White", "Blue", "Red"],
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "description": "Classic Adidas Originals T-shirt with the iconic trefoil logo. Made from soft cotton for all-day comfort.",
+        "specifications": {
+            "Material": "100% Cotton",
+            "Fit": "Regular",
+            "Care Instructions": "Machine wash",
+            "Neck": "Crew neck",
+            "Sleeve": "Short sleeve"
+        },
+        "rating": 4.3,
+        "reviews": [
+            {
+                "user": "James K.",
+                "rating": 4,
+                "title": "Good quality",
+                "comment": "Fits well and material is comfortable."
+            }
+        ],
+        "stock": 35,
+        "isFeatured": false,
+        "isDeal": false
+    },
+    {
+        "id": 5,
+        "name": "LG 55-inch 4K Smart TV",
+        "category": "electronics",
+        "brand": "lg",
+        "price": 1800000,
+        "originalPrice": 2200000,
+        "discount": 18,
+        "images": [
+            "images/products/lg-tv-1.jpg",
+            "images/products/lg-tv-2.jpg"
+        ],
+        "colors": ["Black"],
+        "sizes": ["55-inch"],
+        "description": "The LG 4K Smart TV features AI-powered picture and sound quality, webOS for smart functionality, and a sleek, borderless design.",
+        "specifications": {
+            "Display": "55-inch 4K UHD (3840 x 2160)",
+            "HDR": "HDR10, HLG",
+            "Smart Platform": "webOS",
+            "Processor": "α7 Gen5 AI Processor",
+            "Audio": "20W 2.0ch",
+            "Ports": "4 HDMI, 2 USB",
+            "WiFi": "Yes"
+        },
+        "rating": 4.7,
+        "reviews": [
+            {
+                "user": "Robert L.",
+                "rating": 5,
+                "title": "Amazing picture quality",
+                "comment": "The colors are vibrant and the smart features work flawlessly."
+            },
+            {
+                "user": "Grace M.",
+                "rating": 4,
+                "title": "Great TV",
+                "comment": "Love the thin bezels and picture quality."
+            }
+        ],
+        "stock": 7,
+        "isFeatured": true,
+        "isDeal": true
+    },
+    {
+        "id": 6,
+        "name": "KitchenAid Stand Mixer",
+        "category": "home",
+        "brand": "kitchenaid",
+        "price": 1200000,
+        "originalPrice": 1500000,
+        "discount": 20,
+        "images": [
+            "images/products/kitchenaid-1.jpg",
+            "images/products/kitchenaid-2.jpg"
+        ],
+        "colors": ["Empire Red", "Black", "White", "Pistachio"],
+        "sizes": ["5.5QT"],
+        "description": "The KitchenAid Artisan Series 5-Quart Stand Mixer features a powerful motor, 10 speeds, and a tilt-head design for easy access to the bowl.",
+        "specifications": {
+            "Capacity": "5.5 quarts",
+            "Power": "300W",
+            "Speeds": "10",
+            "Attachments Included": "Flat beater, dough hook, wire whip",
+            "Color Options": "Multiple",
+            "Weight": "12.7kg"
+        },
+        "rating": 4.9,
+        "reviews": [
+            {
+                "user": "Anna B.",
+                "rating": 5,
+                "title": "Baking game changer",
+                "comment": "Makes baking so much easier and more enjoyable."
+            }
+        ],
+        "stock": 4,
+        "isFeatured": false,
+        "isDeal": false
+    },
+    {
+        "id": 7,
+        "name": "Dove Body Wash",
+        "category": "beauty",
+        "brand": "dove",
+        "price": 15000,
+        "originalPrice": 18000,
+        "discount": 17,
+        "images": [
+            "images/products/dove-1.jpg"
+        ],
+        "colors": ["Original", "Shea Butter", "Cucumber"],
+        "sizes": ["750ml"],
+        "description": "Dove Deep Moisture Body Wash nourishes your skin deep down while you shower, leaving it soft and smooth.",
+        "specifications": {
+            "Volume": "750ml",
+            "Skin Type": "All skin types",
+            "Fragrance": "Original",
+            "Key Ingredients": "Moisture Renew Blend with 100x more moisturizers"
+        },
+        "rating": 4.5,
+        "reviews": [
+            {
+                "user": "Sophia N.",
+                "rating": 4,
+                "title": "Moisturizing",
+                "comment": "Leaves my skin feeling soft and not dry."
+            }
+        ],
+        "stock": 50,
+        "isFeatured": false,
+        "isDeal": true
+    },
+    {
+        "id": 8,
+        "name": "Kilimanjaro Premium Coffee",
+        "category": "grocery",
+        "brand": "kilimanjaro",
+        "price": 25000,
+        "originalPrice": 30000,
+        "discount": 17,
+        "images": [
+            "images/products/coffee-1.jpg",
+            "images/products/coffee-2.jpg"
+        ],
+        "colors": ["Medium Roast", "Dark Roast"],
+        "sizes": ["500g"],
+        "description": "100% Arabica coffee beans grown on the slopes of Mount Kilimanjaro. Rich flavor with notes of chocolate and citrus.",
+        "specifications": {
+            "Type": "Arabica",
+            "Roast": "Medium/Dark",
+            "Weight": "500g",
+            "Origin": "Tanzania",
+            "Flavor Notes": "Chocolate, citrus, caramel"
+        },
+        "rating": 4.8,
+        "reviews": [
+            {
+                "user": "Paul S.",
+                "rating": 5,
+                "title": "Best Tanzanian coffee",
+                "comment": "The aroma and taste are exceptional."
+            }
+        ],
+        "stock": 30,
+        "isFeatured": true,
+        "isDeal": false
+    }
+]
