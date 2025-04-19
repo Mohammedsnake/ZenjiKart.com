@@ -1,68 +1,148 @@
-/* Responsive Styles */
-@media (max-width: 1200px) {
-    .search-box {
-        width: 40%;
-    }
+/* Base Styles (Mobile First) */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-@media (max-width: 992px) {
-    .product-details-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .auth-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .auth-image {
-        display: none;
-    }
-    
-    .checkout-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .order-summary {
-        margin-top: 30px;
-    }
+.search-box {
+    width: 100%;
 }
 
-@media (max-width: 768px) {
-    header .container {
-        flex-wrap: wrap;
-    }
-    
-    .logo {
-        order: 1;
-    }
-    
-    .mobile-menu-btn {
-        order: 2;
-        display: block;
-    }
-    
-    .search-box {
-        order: 3;
-        width: 100%;
-        margin: 15px 0;
-    }
-    
-    nav {
-        order: 4;
-        display: none;
-    }
-    
-    nav.active {
-        display: block;
-        width: 100%;
-        margin-top: 15px;
-    }
-    
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
+.product-details-container,
+.auth-container,
+.checkout-container,
+.cart-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.auth-image {
+    display: none;
+}
+
+.order-summary {
+    margin-top: 30px;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.logo {
+    order: 1;
+}
+
+.mobile-menu-btn {
+    order: 2;
+    display: block;
+}
+
+nav {
+    order: 4;
+    display: none;
+    width: 100%;
+}
+
+nav.active {
+    display: block;
+    margin-top: 15px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero {
+    height: 250px;
+}
+
+.slide .container {
+    padding: 20px;
+}
+
+.slide h1 {
+    font-size: 24px;
+}
+
+.slide p {
+    font-size: 16px;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+}
+
+.cart-item-total {
+    grid-column: 1 / -1;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.product-card {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.product-actions .btn {
+    width: 100%;
+}
+
+.tabs-header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    flex: 1;
+    min-width: 120px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.checkout-progress {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.progress-step {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.coupon-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.apply-btn {
+    width: 100%;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
     .hero {
         height: 300px;
     }
@@ -71,93 +151,127 @@
         font-size: 28px;
     }
     
-    .slide p {
-        font-size: 16px;
-    }
-    
-    .cart-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .cart-item {
-        grid-template-columns: 80px 1fr;
-    }
-    
-    .cart-item-total {
-        grid-column: 1 / -1;
-        align-items: flex-start;
-        margin-top: 10px;
-    }
-    
-    .product-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-}
-
-@media (max-width: 576px) {
-    .container {
-        width: 95%;
-    }
-    
-    .hero {
-        height: 250px;
-    }
-    
-    .slide .container {
-        padding: 20px;
-    }
-    
-    .slide h1 {
-        font-size: 24px;
-    }
-    
-    .category-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-    
-    .product-card {
-        grid-template-columns: 1fr;
-    }
-    
-    .product-actions .btn {
+    .search-box {
         width: 100%;
+        margin: 15px 0;
     }
     
-    .tabs-header {
-        flex-wrap: wrap;
+    header .container {
+        flex-direction: row;
+        align-items: center;
     }
     
-    .tab-btn {
-        flex: 1;
-        min-width: 120px;
-        padding: 10px;
-        font-size: 14px;
-    }
-    
-    .checkout-progress {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
-    
-    .checkout-progress::before {
+    .mobile-menu-btn {
         display: none;
     }
     
-    .progress-step {
-        flex-direction: row;
-        gap: 10px;
+    nav {
+        display: block;
+        order: 2;
+        width: auto;
+        margin-top: 0;
     }
     
-    .progress-step p {
-        margin-bottom: 0;
+    nav ul {
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    .logo {
+        margin-right: auto;
+    }
+    
+    .search-box {
+        order: 3;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .product-details-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .auth-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .auth-image {
+        display: block;
+    }
+    
+    .checkout-container {
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .order-summary {
+        margin-top: 0;
+    }
+    
+    .cart-container {
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .cart-item {
+        grid-template-columns: 100px 2fr 1fr 1fr;
+    }
+    
+    .cart-item-total {
+        grid-column: auto;
+        align-items: center;
+        margin-top: 0;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .category-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .product-card {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .product-actions .btn {
+        width: auto;
+    }
+    
+    .tabs-header {
+        flex-wrap: nowrap;
+    }
+    
+    .checkout-progress {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .progress-step {
+        flex-direction: column;
+        gap: 5px;
     }
     
     .coupon-input {
-        flex-direction: column;
+        flex-direction: row;
     }
     
     .apply-btn {
-        width: 100%;
+        width: auto;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .search-box {
+        width: 40%;
+    }
+    
+    .container {
+        width: 85%;
+    }
+    
+    .hero {
+        height: 400px;
     }
 }
