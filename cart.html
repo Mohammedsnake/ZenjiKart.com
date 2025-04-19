@@ -3,113 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Shopping Cart - ZenjiKart</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Your shopping cart at ZenjiKart - Tanzania's leading online marketplace">
+    <title>Your Shopping Cart - ZenjiKart | Tanzania's Online Marketplace</title>
+    
+    <!-- Preload important resources -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- CSS with media query for print -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/responsive.css" media="screen">
+    <link rel="stylesheet" href="css/print.css" media="print">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.zenjikart.co.tz/cart.html">
+    
+    <!-- Structured data for rich snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Shopping Cart",
+        "description": "View and manage your shopping cart at ZenjiKart",
+        "url": "https://www.zenjikart.co.tz/cart.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "ZenjiKart",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.zenjikart.co.tz/images/logo1.png"
+            }
+        }
+    }
+    </script>
 </head>
 <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Header Section -->
     <header>
         <div class="container">
             <div class="logo">
-                <a href="index.html"><img src="images/logo1.png" alt="ZenjiKart Logo"></a>
+                <a href="index.html" aria-label="ZenjiKart Home">
+                    <img src="images/logo1.png" alt="ZenjiKart Logo" width="150" height="40" loading="lazy">
+                </a>
             </div>
+            
             <div class="search-box">
-                <input type="text" placeholder="Search for products, brands and more">
-                <button><i class="fas fa-search"></i></button>
+                <form role="search" aria-label="Sitewide">
+                    <input type="search" placeholder="Search for products, brands and more" aria-label="Search products">
+                    <button type="submit" aria-label="Search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
             </div>
-            <nav>
+            
+            <nav aria-label="Main navigation">
                 <ul>
-                    <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
-                    <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
-                    <li><a href="products.html"><i class="fas fa-store"></i> Shop</a></li>
-                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span></a></li>
+                    <li><a href="login.html"><i class="fas fa-user" aria-hidden="true"></i> <span>Login</span></a></li>
+                    <li><a href="register.html"><i class="fas fa-user-plus" aria-hidden="true"></i> <span>Register</span></a></li>
+                    <li><a href="products.html"><i class="fas fa-store" aria-hidden="true"></i> <span>Shop</span></a></li>
+                    <li><a href="cart.html" class="cart-link">
+                        <i class="fas fa-shopping-cart" aria-hidden="true"></i> 
+                        <span>Cart</span> 
+                        <span class="cart-count" aria-live="polite">0</span>
+                    </a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
+            
+            <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
         </div>
     </header>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu">
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
         <ul>
-            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="products.html"><i class="fas fa-store"></i> Shop</a></li>
-            <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
-            <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
-            <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+            <li><a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+            <li><a href="products.html"><i class="fas fa-store" aria-hidden="true"></i> Shop</a></li>
+            <li><a href="login.html"><i class="fas fa-user" aria-hidden="true"></i> Login</a></li>
+            <li><a href="register.html"><i class="fas fa-user-plus" aria-hidden="true"></i> Register</a></li>
+            <li><a href="cart.html"><i class="fas fa-shopping-cart" aria-hidden="true"></i> Cart</a></li>
         </ul>
     </div>
 
-    <!-- Cart Section -->
-    <section class="shopping-cart">
-        <div class="container">
-            <div class="cart-header">
-                <h1>My Shopping Cart</h1>
-                <p id="cart-item-count">0 items</p>
-            </div>
-            
-            <div class="cart-container">
-                <div class="cart-items" id="cart-items">
-                    <!-- Cart items will be loaded via JavaScript -->
-                    <div class="empty-cart">
-                        <i class="fas fa-shopping-cart"></i>
-                        <h2>Your cart is empty!</h2>
-                        <p>You have no items in your shopping cart.</p>
-                        <a href="products.html" class="btn">Continue Shopping</a>
-                    </div>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Cart Section -->
+        <section class="shopping-cart" aria-labelledby="cart-heading">
+            <div class="container">
+                <div class="cart-header">
+                    <h1 id="cart-heading">My Shopping Cart</h1>
+                    <p id="cart-item-count" aria-live="polite">0 items</p>
                 </div>
                 
-                <div class="cart-summary">
-                    <h2>Order Summary</h2>
-                    <div class="summary-details">
-                        <div class="summary-row">
-                            <span>Subtotal</span>
-                            <span id="cart-subtotal">TZS 0</span>
-                        </div>
-                        <div class="summary-row">
-                            <span>Delivery Charges</span>
-                            <span id="delivery-charge">TZS 0</span>
-                        </div>
-                        <div class="summary-row">
-                            <span>Discount</span>
-                            <span id="cart-discount">-TZS 0</span>
-                        </div>
-                        <div class="summary-row total">
-                            <span>Total</span>
-                            <span id="cart-total">TZS 0</span>
-                        </div>
-                    </div>
-                    <button class="btn checkout-btn" id="proceed-to-checkout">PROCEED TO CHECKOUT</button>
-                    
-                    <div class="payment-options">
-                        <h3>We Accept</h3>
-                        <div class="payment-icons">
-                            <i class="fab fa-cc-visa"></i>
-                            <i class="fab fa-cc-mastercard"></i>
-                            <i class="fab fa-cc-paypal"></i>
-                            <i class="fas fa-mobile-alt"></i>
+                <div class="cart-container">
+                    <div class="cart-items" id="cart-items">
+                        <!-- Cart items will be loaded via JavaScript -->
+                        <div class="empty-cart">
+                            <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                            <h2>Your cart is empty!</h2>
+                            <p>You have no items in your shopping cart.</p>
+                            <a href="products.html" class="btn">Continue Shopping</a>
                         </div>
                     </div>
                     
-                    <div class="secure-checkout">
-                        <i class="fas fa-lock"></i>
-                        <span>Secure Checkout</span>
+                    <aside class="cart-summary" aria-labelledby="summary-heading">
+                        <h2 id="summary-heading">Order Summary</h2>
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span id="cart-subtotal">TZS 0</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Delivery Charges</span>
+                                <span id="delivery-charge">TZS 0</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Discount</span>
+                                <span id="cart-discount">-TZS 0</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total</span>
+                                <span id="cart-total">TZS 0</span>
+                            </div>
+                        </div>
+                        <button class="btn checkout-btn" id="proceed-to-checkout" aria-label="Proceed to checkout">
+                            PROCEED TO CHECKOUT
+                        </button>
+                        
+                        <div class="payment-options">
+                            <h3>We Accept</h3>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-visa" aria-label="Visa"></i>
+                                <i class="fab fa-cc-mastercard" aria-label="Mastercard"></i>
+                                <i class="fab fa-cc-paypal" aria-label="PayPal"></i>
+                                <i class="fas fa-mobile-alt" aria-label="Mobile Payments"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="secure-checkout">
+                            <i class="fas fa-lock" aria-hidden="true"></i>
+                            <span>Secure Checkout</span>
+                        </div>
+                    </aside>
+                </div>
+                
+                <section class="recently-viewed" aria-labelledby="recently-viewed-heading">
+                    <h2 id="recently-viewed-heading">Recently Viewed</h2>
+                    <div class="product-grid" id="recently-viewed">
+                        <!-- Recently viewed products will be loaded via JavaScript -->
                     </div>
-                </div>
+                </section>
             </div>
-            
-            <div class="recently-viewed">
-                <h2>Recently Viewed</h2>
-                <div class="product-grid" id="recently-viewed">
-                    <!-- Recently viewed products will be loaded via JavaScript -->
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -118,50 +172,63 @@
                 <div class="footer-col">
                     <h3>About ZenjiKart</h3>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Press</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="press.html">Press</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Help</h3>
                     <ul>
-                        <li><a href="#">Payments</a></li>
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Cancellation & Returns</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="payments.html">Payments</a></li>
+                        <li><a href="shipping.html">Shipping</a></li>
+                        <li><a href="returns.html">Cancellation & Returns</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Policy</h3>
                     <ul>
-                        <li><a href="#">Return Policy</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Security</a></li>
-                        <li><a href="#">Privacy</a></li>
+                        <li><a href="return-policy.html">Return Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                        <li><a href="security.html">Security</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Contact Us</h3>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Dar es Salaam, Tanzania</li>
-                        <li><i class="fas fa-phone"></i> +255 123 456 789</li>
-                        <li><i class="fas fa-envelope"></i> support@zenjikart.co.tz</li>
-                    </ul>
+                    <address>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Dar es Salaam, Tanzania</li>
+                            <li><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+255123456789">+255 123 456 789</a></li>
+                            <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:support@zenjikart.co.tz">support@zenjikart.co.tz</a></li>
+                        </ul>
+                    </address>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/zenjikart" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/zenjikart" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://instagram.com/zenjikart" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 ZenjiKart. All Rights Reserved.</p>
+                <p>&copy; <span id="current-year">2023</span> ZenjiKart. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/cart.js"></script>
+    <!-- Loading essential JS with defer -->
+    <script src="js/cart.js" defer></script>
+    
+    <!-- Inline script for current year -->
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    
+    <!-- Load Google Analytics if needed -->
+    <script>
+        // Add your analytics code here if needed
+    </script>
 </body>
 </html>
